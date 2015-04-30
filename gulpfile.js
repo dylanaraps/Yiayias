@@ -56,6 +56,7 @@ return sass('src/scss/', {style: 'expanded', loadPath: 'src/scss/partials', verb
 			html: ['src/*.html']
 			}))
 			.pipe(concatCss("main.css"))
+			.pipe(gulp.dest('css/unc'))
 			.pipe(cssc())
 			.pipe(gulp.dest('css/'))
 			.pipe(reload({stream: true}));

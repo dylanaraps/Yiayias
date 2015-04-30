@@ -5,12 +5,20 @@ Written by Dylan Araps */
 $nav-height: 50px;
 $nav-text: #FFFFFF;
 
+$section1-text: #FFFFFF;
+
 /* Reset Styles */
 html,
 body,
-ul {
+ul,
+h1,
+h2 {
 	margin: 0;
 	padding: 0;
+}
+
+body {
+	background: #FFFFFF;
 }
 
 /* Box Sizing */
@@ -19,15 +27,21 @@ html {
 }
 
 *,
-*:before,
-*:after {
-	box-sizing: inherit;
+	*:before,
+	*:after {
+		box-sizing: inherit;
+	}
+
+	/* Yiayia's Font */
+	@font-face {
+	font-family: 'yiayias';
+	src: 	url('../fonts/dalek-webfont.woff2') format('woff2'),
+		url('../fonts/dalek-webfont.woff') format('woff');
 }
 
 /* Nav Styles */
 nav {
 	height: $nav-height; // Remember to set bottom margin to first element
-	line-height: $nav-height;
 	margin: 0 5%;
 	position: fixed;
 	top: 0;
@@ -40,7 +54,8 @@ nav {
 
 	li:first-child { // Styles the first list item, in this case the brand!
 		float: left;
-		font-weight: bold;
+		font: 1.5em 'yiayias'; // Downside to the font shorthand is that it overides line-height which ends up breaking the vertical centering of the nav.
+		line-height: $nav-height; // I'm not going to use !important so line-height has to be used twice.
 		margin-left: 0;
 
 		&:hover {
@@ -51,6 +66,8 @@ nav {
 	li {
 		display: inline-block;
 		float: right;
+		font: 1em Segoe UI,Segoe, Tahoma, Geneva, sans-serif;
+		line-height: $nav-height;
 		margin-left: 30px;
 		transition: .2s;
 
@@ -59,19 +76,67 @@ nav {
 			opacity: .7;
 		}
 	}
+}
 
-	.nav-brand {
+/* Text Styles */
+h2,
+p {
+	font-family: Segou UI, Segoe, Tahoma, Geneva, sans-serif;
+}
 
+h2 {
+	color: #111111;
+	font-size: 3em;
+	font-weight: bold;
+}
+
+p {
+	font-size: 1em;
+}
+
+/* Section Styles */
+
+/* Section */
+.section1,
+.section2,
+.section3,
+.section4 { // I love auto-prefixer!
+}
+
+/* Border between sections */
+.greek-border {
+	height: 50px;
+	background: url('../img/bg/border.png');
+	background-size: 71px;
+}
+
+/* Section 1 */
+.section1 {
+	align-items: center;
+	background-size: cover;
+	background: url("../img/bg/section1.jpg") no-repeat 50% 50%; // try and fix attatchment fixed on ios safari
+	display: flex;
+	flex-direction: column;
+	height: 50vh;
+	justify-content: center;
+	overflow: hidden;
+
+	h1,
+	h2  {
+		color: $section1-text;
 	}
 
+	h1 { // Yiayia's Logo
+		font: 8em 'yiayias';
+	}
+
+	h2 {
+		font-size: 2.5em; // Shorthand Font doesn't work here.
+		font-weight: normal;
+	}
 }
 
-.nav-scroll {
-	background: rgba(0, 0, 0, .5);
+.section2 {
+
 }
 
-// Temp Styles
-body {
-	background: blue;
-	height: 2000px;
-}
