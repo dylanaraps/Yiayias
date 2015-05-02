@@ -34,7 +34,7 @@ html {
 
 @font-face {
   font-family: 'yiayias';
-  src: url("../fonts/dalek-webfont.woff2") format("woff2"), url("../fonts/dalek-webfont.woff") format("woff");
+  src: url("../fonts/Yiayias.woff2") format("woff2"), url("../fonts/Yiayias.woff") format("woff");
 }
 
 /* Nav Styles */
@@ -101,12 +101,6 @@ p {
 
 /* Border between sections */
 
-.greek-border {
-  height: 50px;
-  background: url("../img/bg/border.png");
-  background-size: 71px;
-}
-
 /* Section 1 */
 
 .section1 {
@@ -125,7 +119,7 @@ p {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 50vh;
+  height: 75vh;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -133,16 +127,10 @@ p {
   overflow: hidden;
 }
 
-.section1 h1,
-.section1 h2 {
+.section1 h1 {
   color: #FFFFFF;
 }
 
 .section1 h1 {
   font: 8em 'yiayias';
-}
-
-.section1 h2 {
-  font-size: 2.5em;
-  font-weight: normal;
 }

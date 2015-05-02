@@ -27,16 +27,16 @@ html {
 }
 
 *,
-	*:before,
-	*:after {
-		box-sizing: inherit;
-	}
+*:before,
+*:after {
+	box-sizing: inherit;
+}
 
-	/* Yiayia's Font */
-	@font-face {
+/* Yiayia's Font */
+@font-face {
 	font-family: 'yiayias';
-	src: 	url('../fonts/dalek-webfont.woff2') format('woff2'),
-		url('../fonts/dalek-webfont.woff') format('woff');
+	src: 	url('../fonts/Yiayias.woff2') format('woff2'),
+		url('../fonts/Yiayias.woff') format('woff');
 }
 
 /* Nav Styles */
@@ -101,14 +101,15 @@ p {
 .section2,
 .section3,
 .section4 { // I love auto-prefixer!
+
 }
 
 /* Border between sections */
-.greek-border {
-	height: 50px;
-	background: url('../img/bg/border.png');
-	background-size: 71px;
-}
+// .greek-border {
+// 	height: 50px;
+// 	background: url('../img/bg/border.png');
+// 	background-size: 71px;
+// }
 
 /* Section 1 */
 .section1 {
@@ -117,7 +118,7 @@ p {
 	background: url("../img/bg/section1.jpg") no-repeat 50% 50%; // try and fix attatchment fixed on ios safari
 	display: flex;
 	flex-direction: column;
-	height: 50vh;
+	height: 75vh;
 	justify-content: center;
 	overflow: hidden;
 
