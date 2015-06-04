@@ -35,8 +35,8 @@ html {
 /* Yiayia's Font */
 @font-face {
 	font-family: 'yiayias';
-	src: 	url('../fonts/Yiayias.woff2') format('woff2'),
-		url('../fonts/Yiayias.woff') format('woff');
+	src: 	url('../fonts/yiayias.woff2') format('woff2'),
+		url('../fonts/yiayias.woff') format('woff');
 }
 
 /* Nav Styles */
@@ -104,21 +104,14 @@ p {
 
 }
 
-/* Border between sections */
-// .greek-border {
-// 	height: 50px;
-// 	background: url('../img/bg/border.png');
-// 	background-size: 71px;
-// }
-
 /* Section 1 */
 .section1 {
 	align-items: center;
 	background-size: cover;
-	background: url("../img/bg/section1.jpg") no-repeat 50% 50%; // try and fix attatchment fixed on ios safari
+	background: url("../img/bg/section1alt2.jpg") no-repeat 50% 50%; // try and fix attatchment fixed on ios safari
 	display: flex;
 	flex-direction: column;
-	height: 75vh;
+	height: 70vh;
 	justify-content: center;
 	overflow: hidden;
 
@@ -138,6 +131,25 @@ p {
 }
 
 .section2 {
-
+	height: 50vh;
 }
 
+@media only screen and (max-width: 500px) {
+	nav {
+
+		li {
+			margin: 0 10px 0 10px;
+
+			&:first-child {
+				display: none;
+			}
+		}
+
+	}
+
+	.section1 {
+		h1 {
+			font-size: 6em;
+		}
+	}
+}
